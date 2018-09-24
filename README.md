@@ -34,12 +34,15 @@
 
 #### --Via comando shell:
 
-...
+```bash
+# ...
 
 
 
 
 
+
+```
 
 
 ### Referências:
