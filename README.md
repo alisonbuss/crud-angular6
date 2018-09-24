@@ -36,14 +36,36 @@
 
 ```bash
 # ...
+$ sudo chmod 777 /home/dev/.nvm
 
+$ npm -v
+$ node -v
 
+$ sudo npm install -g npm@latest
 
+$ sudo npm uninstall -g @angular/cli
+$ npm cache clean
+$ sudo npm install -g @angular/cli
 
+$ sudo npm install --save-dev @angular-devkit/build-angular
 
+$ sudo rpm install -g json-server
+
+$ json-server --help
+$ json-server --version
+$ json-server --watch db.json
+
+$ ng help
+$ ng -v
+
+$ ng g component login
+$ ng g component add-user
+$ ng g component edit-user
+$ ng g component list-user
+
+$ ng serve --port 4242
 
 ```
-
 
 ### Referências:
 
