@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    if(this.loginForm.controls.email.value == 'admin@email.com' && this.loginForm.controls.password.value == 'admin') {
-        this.router.navigate(['list-user']);
-    }else {
+    if (this.loginForm.controls.email.value == 'admin@email.com' && this.loginForm.controls.password.value == 'admin') {
+      this.router.navigate(['list-user']);
+    } else {
       this.invalidLogin = true;
     }
   }
@@ -34,7 +34,5 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
   }
-
-
 
 }

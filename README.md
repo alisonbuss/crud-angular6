@@ -125,6 +125,10 @@ $ ng serve --port 4242
   Acessado: *Em Setembro de 2018 por ai...* <br/>
   Disponível: *[https://medium.com/@flaviofagundes/mocks-de-apis-com-json-server-d4d180ec80c7](https://medium.com/@flaviofagundes/mocks-de-apis-com-json-server-d4d180ec80c7)*
 
+* Plugin for VS Code - Huachao Mao. ***REST Client*** <br/>
+  Acessado: *Em Setembro de 2018 por ai...* <br/>
+  Disponível: *[https://marketplace.visualstudio.com/items?itemName=humao.rest-client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)*
+
 * Blog - Danilo Agostinho. ***Criando uma aplicação (Internet Banking) com Angular 6 — na prática e sem complicações*** <br/>
   Acessado: *Em Setembro de 2018 por ai...* <br/>
   Disponível: *[https://medium.com/trainingcenter/criando-uma-aplica%C3%A7%C3%A3o-internet-banking-com-angular-6-na-pr%C3%A1tica-e-sem-complica%C3%A7%C3%B5es-6fcbf98dcc12](https://medium.com/trainingcenter/criando-uma-aplica%C3%A7%C3%A3o-internet-banking-com-angular-6-na-pr%C3%A1tica-e-sem-complica%C3%A7%C3%B5es-6fcbf98dcc12)*
