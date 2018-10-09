@@ -8,7 +8,7 @@
                 "**/.DS_Store": true,
 
                 "**/e2e": true,
-                "**/node_modules": true,
+                "**/node_modules": false,
                 "**/src/app/**/*.spec.ts": false,
                 "**/src/browserslist": true,
                 "**/src/karma.conf.js": true,

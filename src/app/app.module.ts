@@ -1,32 +1,49 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
+import { LOCALE_ID } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { routing } from "./app.routing";
-import { AuthenticationService } from "./service/auth.service";
-import { ReactiveFormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
-import { AddUserComponent } from './add-user/add-user.component';
-import { EditUserComponent } from './edit-user/edit-user.component';
-import { ListUserComponent } from "./list-user/list-user.component";
-import { UserService } from "./service/user.service";
+
+import { PipesModule } from './shared/pipes/pipes.module';
+import { DirectivesModule } from './shared/directives/directives.module';
+import { ComponentsModule } from './shared/components/components.module';
+import { LayoutWebSiteModule } from './layouts/web-site/web-site.module';
+import { SiteModule } from './modules/site/site.module';
+import { AppRoutingModule } from './app.routing.module';
+
+import { Log } from './shared/utilities/log';
+
+import { UserService } from './services/user.service';
+import { UserModule } from './modules/user/user.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    ListUserComponent,
-    AddUserComponent,
-    EditUserComponent
-  ],
-  imports: [
-    BrowserModule,
-    routing,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [AuthenticationService, UserService],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        PipesModule,
+        DirectivesModule,
+        ComponentsModule,
+        LayoutWebSiteModule,
+        SiteModule,
+        UserModule,
+        AppRoutingModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    providers: [
+        Log, UserService, { 
+            provide: LOCALE_ID, useValue: 'en-US' //'pt-BR'
+        }
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+    constructor() { 
+        console.log("AppModule --> constructor");
+    }
+
+}

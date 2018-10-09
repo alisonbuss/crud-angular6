@@ -1,0 +1,39 @@
+
+<nav class="navbar {{ themeNavbar }} navbar-expand-sm">
+    <div class="container">
+        <a routerLink="/" class="navbar-brand" href="#">Publish Super User</a>
+        <button type="button" class="navbar-toggler" 
+                data-toggle="collapse" 
+                data-target="#navbarMain"
+                aria-controls="navbarMain" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarMain" class="collapse navbar-collapse">
+            <div class="navbar-nav">
+                <a routerLinkActive="active" routerLink="/" class="nav-item nav-link">Home <span class="sr-only">(current)</span></a>
+                <a routerLinkActive="active" routerLink="/users" [queryParams]="{page:1}" class="nav-item nav-link">Users</a>
+                <a routerLinkActive="active" routerLink="/users/new" class="nav-item nav-link">New User</a>
+            </div>
+            
+        </div>
+        <div id="navbarRepositori" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="https://github.com/alisonbuss/crud-angular6" target="_blank" class="nav-item nav-link">GitHub</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Themes
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu dropdown-menu-right">
+                        <a (click)="onChangeTheme('navbar-dark bg-primary')" class="dropdown-item">Apply Primary Theme</a>
+                        <a (click)="onChangeTheme('navbar-dark bg-dark')" class="dropdown-item">Apply Dark Theme</a>
+                        <a (click)="onChangeTheme('navbar-light bg-light')" class="dropdown-item">Apply Light Theme</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,18 @@
+
+<user-page>
+
+    <h3>User Detail</h3> 
+
+    <p>{{ idUserEdit }}</p>
+
+    <div *ngIf="user; else loading" class="card">
+
+        <p>User Name: {{ user?.firstName }}</p>
+
+    </div>
+
+    <ng-template #loading>
+        <span>Loading User...</span>
+    </ng-template>
+
+</user-page>

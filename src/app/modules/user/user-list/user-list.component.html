@@ -1,0 +1,56 @@
+
+<user-page>
+
+    <h3>Listing of all Users</h3><br/>
+
+    <p class="text-right">
+        <a [routerLink]="['/users', 'new']" class="btn btn-primary btn-sm">
+            + New User
+        </a>
+    </p>
+
+    <table class="table table-hover" *ngIf="users$ | async as users; else loading">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th class="text-right">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users" >
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <span class="float-right">
+                        <a [routerLink]="['/users', user.id]" class="btn btn-outline-primary btn-sm">
+                            Detail
+                        </a> &nbsp;
+                        <a [routerLink]="['/users', user.id, 'edit']" class="btn btn-outline-warning btn-sm">
+                            Edit
+                        </a> &nbsp;
+                        <a (click)="onDelete(user)" class="btn btn-outline-danger btn-sm">
+                            Delete
+                        </a>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #loading>
+        <span>Loading Users...</span>
+    </ng-template>
+
+    <p>
+        <button (click)="onNextPage()" class="btn btn-primary btn-sm">
+            Next >>
+        </button> &nbsp;
+        Nº Page: {{ page }}
+    </p>
+
+</user-page>

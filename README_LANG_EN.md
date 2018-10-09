@@ -1,10 +1,10 @@
 
 ## In process of translation...
 
-# crud-angular6
+# publish-articles-angular
 
 <h3 align="center">
-    crud-angular6 <br/>Creating a simple CRUD in Angular 6 using (json-server)
+    publish-articles-angular <br/>Angular App for Publication of Articles, using a Rest API (json-server)
 </h3>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
