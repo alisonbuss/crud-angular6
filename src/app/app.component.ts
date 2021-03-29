@@ -1,7 +1,7 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Log } from './shared/utilities/log';
+import { Log } from '@app/shared/utilities/log';
 
 @Component({
 	selector: 'app-root',
@@ -10,18 +10,19 @@ import { Log } from './shared/utilities/log';
 	`,
 	styles: [`  `],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private log: Log) { 
-    this.log.debug("AppComponent -> constructor: ", this);
+    this.log.info("AppComponent -> constructor: ", this);
   }
 
   ngOnInit() {
-    this.log.debug("AppComponent -> ngOnInit: ", this);
+    this.log.info("AppComponent -> ngOnInit: ", this);
   }
 
   ngOnDestroy(){
-    this.log.debug("AppComponent -> ngOnDestroy: ", this);
+    this.log.info("AppComponent -> ngOnDestroy: ", this);
   }
 
 }
+  

@@ -2,6 +2,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { Log } from '../utilities/log';
+
 @NgModule({
   imports: [
     CommonModule
@@ -18,6 +20,8 @@ import { CommonModule } from '@angular/common';
 })
 export class DirectivesModule { 
 
-
+  constructor(private log: Log) { 
+    this.log.info("DirectivesModule -> constructor: ", this);
+  }
   
 }

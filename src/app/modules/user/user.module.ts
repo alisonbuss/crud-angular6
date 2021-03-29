@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { UserPageComponent } from './user-page/user-page.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UserFormComponent } from './user-form/user-form.component';
+import { Log } from '@app/shared/utilities/log';
 
-import { LayoutWebSiteModule } from '../../layouts/web-site/web-site.module';
-import { ComponentsModule } from '../../shared/components/components.module';
+import { UserPageComponent } from '@app/modules/user/user-page/user-page.component';
+import { UserListComponent } from '@app/modules/user/user-list/user-list.component';
+import { UserDetailComponent } from '@app/modules/user/user-detail/user-detail.component';
+import { UserFormComponent } from '@app/modules/user/user-form/user-form.component';
+
+import { LayoutWebSiteModule } from '@app/layouts/web-site/web-site.module';
+import { ComponentsModule } from '@app/shared/components/components.module';
 
 @NgModule({
   imports: [
@@ -38,6 +40,8 @@ import { ComponentsModule } from '../../shared/components/components.module';
 })
 export class UserModule { 
 
-
+  constructor(private log: Log) { 
+    this.log.info("UserModule -> constructor: ", this);
+  }
   
 }

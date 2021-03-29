@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { WebSiteNavTopComponent } from './web-site-nav-top/web-site-nav-top.component';
-import { WebSiteContentComponent } from './web-site-content/web-site-content.component';
+import { Log } from '@app/shared/utilities/log';
 
-import { WebSiteComponent } from './web-site.component';
+import { WebSiteNavTopComponent } from '@app/layouts/web-site/web-site-nav-top/web-site-nav-top.component';
+import { WebSiteContentComponent } from '@app/layouts/web-site/web-site-content/web-site-content.component';
+
+import { WebSiteComponent } from '@app/layouts/web-site/web-site.component';
 
 @NgModule({
   imports: [
@@ -16,7 +18,6 @@ import { WebSiteComponent } from './web-site.component';
   declarations: [
     WebSiteNavTopComponent,
     WebSiteContentComponent,
-
     WebSiteComponent
   ],
   providers: [
@@ -28,6 +29,8 @@ import { WebSiteComponent } from './web-site.component';
 })
 export class LayoutWebSiteModule { 
 
-
+  constructor(private log: Log) { 
+    this.log.info("LayoutWebSiteModule -> constructor: ", this);
+  }
   
 }

@@ -4,8 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap, delay } from 'rxjs/operators';
 
-import { environment } from '../../environments/environment';
-import { User } from '../models/user.model';
+import { environment } from '@app/environments/environment';
+
+import { Log } from '@app/shared/utilities/log';
+
+import { User } from '@app/models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +17,8 @@ export class UserService {
 
   private readonly API = `${environment.API}/users`;
 
-  constructor(private http: HttpClient) {
-
+  constructor(private http: HttpClient, private log: Log) { 
+    this.log.info("UserService -> constructor: ", this);
   }
 
   public getUsers(): Observable<User[]> {

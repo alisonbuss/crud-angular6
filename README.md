@@ -35,35 +35,37 @@
 #### --Via comando shell:
 
 ```bash
-# ...
-$ sudo chmod 777 /home/dev/.nvm
 
+# Ambiente:
 $ npm -v
 $ node -v
 
-$ sudo npm install -g npm@latest
-
-$ sudo npm uninstall -g @angular/cli
+# Instalar Angular(6) :
+$ npm uninstall -g @angular/cli
 $ npm cache clean
-$ sudo npm install -g @angular/cli
+$ npm install -g @angular/cli@6.2.9
 
-$ sudo npm install --save-dev @angular-devkit/build-angular
-
-$ sudo rpm install -g json-server
-
+# Instalar e rodar o (json-server):
+$ rpm install -g json-server
 $ json-server --help
 $ json-server --version
-$ json-server --watch db.json
+$ json-server --watch ./json-server-mock/db.json
+# Acessa: http://localhost:3000/users
 
-$ ng help
-$ ng -v
+# Executar o projeto:
 
-$ ng g component login
-$ ng g component add-user
-$ ng g component edit-user
-$ ng g component list-user
+# Info
+$ npm ls
 
-$ ng serve --port 4242
+# Instalar Dependências
+$ npm install 
+
+# Build do projeto
+$ npm run build
+
+# Executar projeto local
+$ npm run start
+# Acessa: http://localhost:4242
 
 ```
 
@@ -132,6 +134,22 @@ $ ng serve --port 4242
 * Blog - Danilo Agostinho. ***Criando uma aplicação (Internet Banking) com Angular 6 — na prática e sem complicações*** <br/>
   Acessado: *Em Setembro de 2018 por ai...* <br/>
   Disponível: *[https://medium.com/trainingcenter/criando-uma-aplica%C3%A7%C3%A3o-internet-banking-com-angular-6-na-pr%C3%A1tica-e-sem-complica%C3%A7%C3%B5es-6fcbf98dcc12](https://medium.com/trainingcenter/criando-uma-aplica%C3%A7%C3%A3o-internet-banking-com-angular-6-na-pr%C3%A1tica-e-sem-complica%C3%A7%C3%B5es-6fcbf98dcc12)*
+
+* Blog - Debasis Saha. ***Angular 6, Part 3: Lifecycle of a Component*** <br/>
+  Acessado: *Em Março de 2021 por ai...* <br/>
+  Disponível: *[https://dzone.com/articles/angular-6-part-3-life-cycle-of-a-component](https://dzone.com/articles/angular-6-part-3-life-cycle-of-a-component)*
+
+* Blog - Tierney Cyren. ***An Absolute Beginner's Guide to Using npm*** <br/>
+  Acessado: *Em Março de 2021 por ai...* <br/>
+  Disponível: *[https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)*
+
+* Blog - Jacob Neterer. ***Import via Absolute Paths in Angular*** <br/>
+  Acessado: *Em Março de 2021 por ai...* <br/>
+  Disponível: *[https://jacobneterer.medium.com/import-via-absolute-paths-in-angular-fc4146bf2330](https://jacobneterer.medium.com/import-via-absolute-paths-in-angular-fc4146bf2330)*
+
+* Blog - Chris Sev. ***Reference Angular Imports Absolutely for Easier Development*** <br/>
+  Acessado: *Em Março de 2021 por ai...* <br/>
+  Disponível: *[https://scotch.io/tutorials/reference-angular-imports-absolutely-for-easier-development](https://scotch.io/tutorials/reference-angular-imports-absolutely-for-easier-development)*
 
 
 ### Licença

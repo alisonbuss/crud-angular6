@@ -2,7 +2,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FormDebugComponent } from './form-debug/form-debug.component';
+import { Log } from '../utilities/log';
+
+import { FormDebugComponent } from '@app/shared/components/form-debug/form-debug.component';
 
 @NgModule({
   imports: [
@@ -19,5 +21,9 @@ import { FormDebugComponent } from './form-debug/form-debug.component';
   ]
 })
 export class ComponentsModule { 
+
+  constructor(private log: Log) { 
+    this.log.info("ComponentsModule -> constructor: ", this);
+  }
 
 }

@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 
+import { Log } from '@app/shared/utilities/log';
+
 @Component({
   selector: 'user-page',
   templateUrl: './user-page.component.html',
@@ -8,16 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPageComponent implements OnInit {
 
-  constructor() { 
-    
+  constructor(private log: Log) { 
+    this.log.info("UserPageComponent -> constructor: ", this);
   }
 
   ngOnInit() {
-    console.log("UserPageComponent --> ngOnInit");
+    this.log.info("UserPageComponent -> ngOnInit: ", this);
   }
 
   ngOnDestroy(){
-    console.log("UserPageComponent --> ngOnDestroy");
+    this.log.info("UserPageComponent -> ngOnDestroy: ", this);
   }
 
 }

@@ -3,10 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { Observable, Subscription } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
-import { User } from '../../../models/user.model';
-import { UserService } from '../../../services/user.service';
+import { Log } from '@app/shared/utilities/log';
+
+import { User } from '@app/models/user.model';
+import { UserService } from '@app/services/user.service';
 
 @Component({
   selector: 'user-list',
@@ -22,12 +24,14 @@ export class UserListComponent implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
-    private userService: UserService) { 
-    
+    private userService: UserService,
+    private log: Log) { 
+      
+    this.log.info("UserListComponent -> constructor: ", this);
   }
 
   public ngOnInit(): void {
-    console.log("UserListComponent --> ngOnInit");
+    this.log.info("UserListComponent -> ngOnInit: ", this);
 
     // this.userService.getUsers().subscribe(users => this.users = users);
     this.users$ = this.userService.getUsers();
@@ -55,7 +59,7 @@ export class UserListComponent implements OnInit {
   }
 
   public ngOnDestroy(): void {
-    console.log("UserListComponent --> ngOnDestroy");
+    this.log.info("UserListComponent -> ngOnDestroy: ", this);
     this.routeRecord.unsubscribe();
   }
 

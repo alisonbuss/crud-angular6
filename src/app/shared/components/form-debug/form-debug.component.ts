@@ -1,6 +1,8 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 
+import { Log } from '@app/shared/utilities/log';
+
 @Component({
   selector: 'comp-form-debug',
   templateUrl: './form-debug.component.html',
@@ -10,10 +12,16 @@ export class FormDebugComponent implements OnInit {
 
   @Input() form;
 
-  constructor() { }
+  constructor(private log: Log) { 
+    this.log.info("FormDebugComponent -> constructor: ", this);
+  }
 
-  public ngOnInit() {
+  ngOnInit() {
+    this.log.info("FormDebugComponent -> ngOnInit: ", this);
+  }
 
+  ngOnDestroy(){
+    this.log.info("FormDebugComponent -> ngOnDestroy: ", this);
   }
 
 }
