@@ -1,0 +1,47 @@
+---
+# @Description: An example ... .
+
+# Compose and Docker compatibility matrix.
+# Compose file format: 3.7
+# Docker Engine release: 18.06.0+
+version: "3.2"
+
+# Defining a local network with the DRIVER(bridge).
+networks:
+  network_local:
+    external: false
+
+# Defining container services for Compose.
+services:
+
+  # ...
+  json-server:
+    image: image-json-server
+    build:
+      context: ./json-server
+      dockerfile: Dockerfile
+    container_name: json-server
+    restart: always
+    volumes:
+      - ./json-server/db.json:/usr/src/app/json-server-db.json
+    ports:
+      - "3000:3000"
+    networks:
+      - network_local
+
+  # ...
+  nginx-angular:
+    image: image-nginx-angular
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nginx-angular
+    restart: always
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./nginx-logs:/var/log/nginx
+      - ./dist/web-application:/usr/share/nginx/html
+    ports:
+      - "8088:80"
+    networks:
+      - network_local

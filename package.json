@@ -1,15 +1,16 @@
 {
   "name": "crud-angular6",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4242",
-    "build": "ng build",
+    "build": "ng build --prod --output-path=dist/web-application",
+    "build-dev": "ng build --output-path=dist/web-application",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",

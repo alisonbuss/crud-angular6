@@ -1,3 +1,4 @@
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -8,6 +9,13 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+// Apply a 666 milliseconds delay in the application call:
+setTimeout(() => {
 
+  // Start AppModule:
+  platformBrowserDynamic().bootstrapModule(AppModule).catch((err: any) => {
+    // Error AppModule:
+    console.error(err);
+  });
+
+}, 666);

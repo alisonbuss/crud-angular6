@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/nginx-logs
 
 # dependencies
 /node_modules

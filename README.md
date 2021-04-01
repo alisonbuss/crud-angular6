@@ -49,7 +49,7 @@ $ npm install -g @angular/cli@6.2.9
 $ rpm install -g json-server
 $ json-server --help
 $ json-server --version
-$ json-server --watch ./json-server-mock/db.json
+$ json-server --watch ./json-server/db.json
 # Acessa: http://localhost:3000/users
 
 # Executar o projeto:
@@ -66,6 +66,9 @@ $ npm run build
 # Executar projeto local
 $ npm run start
 # Acessa: http://localhost:4242
+
+# Executar projeto no Docker
+$ docker-compose up --build -d
 
 ```
 
@@ -151,6 +154,9 @@ $ npm run start
   Acessado: *Em Março de 2021 por ai...* <br/>
   Disponível: *[https://scotch.io/tutorials/reference-angular-imports-absolutely-for-easier-development](https://scotch.io/tutorials/reference-angular-imports-absolutely-for-easier-development)*
 
+* Blog - Alligator.io. ***Creating a Custom Loading Screen in Angular*** <br/>
+  Acessado: *Em Março de 2021 por ai...* <br/>
+  Disponível: *[https://www.digitalocean.com/community/tutorials/angular-custom-loading-screen](https://www.digitalocean.com/community/tutorials/angular-custom-loading-screen)*
 
 ### Licença
 
